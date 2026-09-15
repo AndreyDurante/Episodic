@@ -19,7 +19,7 @@ export default function OptionCard({
       <div className="option-card-header">
         {IconComponent && (
           <div className="option-icon-box">
-            {typeof IconComponent === 'function' ? <IconComponent size={24} /> : IconComponent}
+            <IconComponent size={24} />
           </div>
         )}
         <div className={`option-check-circle ${selected ? 'checked' : ''}`}>

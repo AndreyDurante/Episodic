@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import MainLayout from '../layouts/MainLayout/MainLayout';
-import Home from '../pages/Home/Home';
-import Discover from '../pages/Discover/Discover';
-import Results from '../pages/Results/Results';
-import Details from '../pages/Details/Details';
+import MainLayout from '../layouts/MainLayout/MainLayout.jsx';
+import Home from '../pages/Home/Home.jsx';
+import Discover from '../pages/Discover/Discover.jsx';
+import Results from '../pages/Results/Results.jsx';
+import Details from '../pages/Details/Details.jsx';
 
 export default function AppRoutes() {
   return (

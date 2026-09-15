@@ -12,9 +12,9 @@ import {
   ArrowRight,
   Flame,
 } from 'lucide-react';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
-import QuizQuestion from '../../components/QuizQuestion/QuizQuestion';
-import Button from '../../components/Button/Button';
+import ProgressBar from '../../components/ProgressBar/ProgressBar.jsx';
+import QuizQuestion from '../../components/QuizQuestion/QuizQuestion.jsx';
+import Button from '../../components/Button/Button.jsx';
 import './Discover.css';
 
 export default function Discover() {
