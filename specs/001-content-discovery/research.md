@@ -96,11 +96,16 @@ Utilizar `lucide-react`.
 ## 5. Estratégia de Identidade Visual & Responsividade
 
 ### Decisão
-- **Tema Escuro (Dark Theme)**:
-  - Fundo predominante: `#0f1014` / `#15181f`.
-  - Superfícies dos cards: `#1c202a` com bordas sutis `#2d3446`.
-  - Cores de destaque (Accent): Roxo/Azul vibrante `#6366f1` / `#818cf8` ou Vermelho streaming `#e50914` para botões principais e seleção ativa.
-  - Tipografia: Texto principal `#f8fafc`, texto secundário `#94a3b8`.
+- **Identidade Minimalista e Alto Contraste (Preto & Vermelho Sólido)**:
+  - **Fundo predominante**: Preto absoluto `#000000` / `#0a0a0a`.
+  - **Superfícies e cards**: Preto/cinza neutro profundo `#111111` / `#141414`, com estados hover em `#1c1c1c` e bordas neutras sutis `#222222`.
+  - **Cor principal de destaque (Accent)**: Vermelho cinematográfico `#AD1818` como única cor de destaque (substituindo integralmente roxo e azul), aplicado em botões de ação primários, anéis de foco, seleções ativas, badges e detalhes visuais.
+  - **Variações da cor de destaque**:
+    - Hover de botões/elementos: `#8b1010`.
+    - Superfícies ativas sutis / washes: `rgba(173, 24, 24, 0.12)`.
+    - Sombras e anéis de brilho (glow): `rgba(173, 24, 24, 0.25)`.
+  - **Ausência de Gradientes**: Total eliminação de degradês e gradientes lineares/radiais em prol de cores sólidas, planas e de alto impacto visual.
+  - **Tipografia**: Texto principal `#ffffff`, texto secundário neutro `#a3a3a3`, texto sutil/muted `#666666`.
 - **Responsividade**:
   - CSS com abordagem mobile-first utilizando CSS Flexbox e CSS Grid.
   - Breakpoint principal: Mobile (< 768px) em coluna única / 2 colunas para cards; Desktop (>= 768px) em grid de 4 a 5 colunas para recomendações.

@@ -38,7 +38,7 @@ export default function MovieCard({
             </span>
             {rating > 0 && (
               <span className="movie-rating-badge">
-                <Star size={12} className="star-icon" fill="#f59e0b" color="#f59e0b" />
+                <Star size={12} className="star-icon" fill="#AD1818" color="#AD1818" />
                 {formattedRating}
               </span>
             )}

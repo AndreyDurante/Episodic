@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         <h1 className="hero-title">
-          Descubra o filme ou série ideal em <span className="title-gradient">menos de 1 minuto</span>
+          Descubra o filme ou série ideal em <span className="title-highlight">menos de 1 minuto</span>
         </h1>
 
         <p className="hero-description">
@@ -33,43 +33,8 @@ export default function Home() {
             <span>Encontrar algo para assistir</span>
           </Button>
         </div>
-
-        <div className="hero-highlights">
-          <div className="highlight-item">
-            <CheckCircle2 size={16} className="highlight-icon" />
-            <span>100% Gratuito e sem cadastro</span>
-          </div>
-          <div className="highlight-item">
-            <Zap size={16} className="highlight-icon" />
-            <span>Quiz rápido em 3 etapas</span>
-          </div>
-          <div className="highlight-item">
-            <Film size={16} className="highlight-icon" />
-            <span>Catálogo oficial TMDB</span>
-          </div>
-        </div>
       </section>
 
-      <section className="how-it-works-section">
-        <h2 className="section-title">Como funciona a descoberta</h2>
-        <div className="steps-cards-grid">
-          <div className="step-card">
-            <div className="step-number">1</div>
-            <h3>Escolha o Formato</h3>
-            <p>Selecione se hoje é dia de maratonar uma série envolvente ou curtir um filme fechado.</p>
-          </div>
-          <div className="step-card">
-            <div className="step-number">2</div>
-            <h3>Defina o Gênero</h3>
-            <p>Selecione seu gênero favorito: ação, comédia, drama, ficção, suspense ou animação.</p>
-          </div>
-          <div className="step-card">
-            <div className="step-number">3</div>
-            <h3>Sintonize a Vibe</h3>
-            <p>Indique o clima da sua sessão: relaxar, rir, roer as unhas ou se emocionar.</p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

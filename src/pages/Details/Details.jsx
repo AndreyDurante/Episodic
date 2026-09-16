@@ -96,7 +96,7 @@ export default function Details() {
             className="details-backdrop-img"
             aria-hidden="true"
           />
-          <div className="details-backdrop-gradient" />
+          <div className="details-backdrop-overlay" />
         </div>
       )}
 
@@ -138,7 +138,7 @@ export default function Details() {
 
             {movie.rating > 0 && (
               <span className="details-rating-badge">
-                <Star size={16} fill="#f59e0b" color="#f59e0b" />
+                <Star size={16} fill="#AD1818" color="#AD1818" />
                 <strong>{movie.rating.toFixed(1)}</strong>
                 {movie.voteCount > 0 && (
                   <span className="details-vote-count">({movie.voteCount} votos)</span>
