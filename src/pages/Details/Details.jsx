@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import {
   ArrowLeft,
   Star,
@@ -19,6 +19,7 @@ import './Details.css';
 export default function Details() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,11 @@ export default function Details() {
   }, [fetchDetails]);
 
   const handleBack = () => {
+    if (location.state?.from) {
+      navigate(location.state.from);
+      return;
+    }
+
     // Retorna para a página anterior mantendo os resultados da busca
     if (window.history.state && window.history.state.idx > 0) {
       navigate(-1);

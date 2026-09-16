@@ -111,6 +111,32 @@ export async function getRecommendations({ type = 'movie', genre, mood }) {
 /**
  * Busca detalhes completos de um título (filme ou série) por ID
  */
+/**
+ * Retorna os três títulos em alta do catálogo misto (filmes e séries).
+ * O TMDB disponibiliza janelas de tendência diária e semanal; a semanal é
+ * usada como o sinal ao vivo mais próximo para a vitrine mensal da Home.
+ */
+export async function getMonthlyMostWatched() {
+  const data = await fetchFromTMDB('/trending/all/week');
+  const rankedItems = (data.results || [])
+    .filter((item) => item.media_type === 'movie' || item.media_type === 'tv')
+    .slice(0, 3)
+    .map((item, index) => ({
+      id: item.id,
+      title: item.title || item.name || 'Sem título',
+      poster: getPosterUrl(item.poster_path),
+      type: item.media_type,
+      rankPosition: index + 1,
+      rating: item.vote_average ? Number(item.vote_average.toFixed(1)) : 0,
+    }));
+
+  if (rankedItems.length !== 3) {
+    throw new Error('O ranking mais assistido está indisponível no momento.');
+  }
+
+  return rankedItems;
+}
+
 export async function getContentDetails(id, type = 'movie') {
   // Se o tipo não for explícito, tenta primeiro como filme e se falhar tenta como série
   let data;
