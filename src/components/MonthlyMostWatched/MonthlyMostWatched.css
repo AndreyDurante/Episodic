@@ -1,0 +1,174 @@
+.monthly-most-watched {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.monthly-most-watched-heading {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.monthly-most-watched-eyebrow {
+  color: var(--accent-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.monthly-most-watched-heading h2 {
+  color: var(--text-primary);
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.monthly-ranking-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+
+.monthly-ranking-card {
+  min-width: 0;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.monthly-ranking-link {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  align-items: center;
+  min-height: 144px;
+  color: var(--text-primary);
+  transition: background-color var(--transition-normal), transform var(--transition-normal);
+}
+
+.monthly-ranking-link:hover {
+  background-color: var(--bg-surface-hover);
+  transform: translateY(-2px);
+}
+
+.monthly-ranking-link:focus-visible {
+  outline-offset: -4px;
+}
+
+.monthly-ranking-poster-wrapper {
+  position: relative;
+  height: 144px;
+  background-color: var(--bg-card);
+}
+
+.monthly-ranking-poster,
+.monthly-ranking-poster-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.monthly-ranking-poster {
+  object-fit: cover;
+}
+
+.monthly-ranking-poster-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.monthly-ranking-position {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  min-width: 36px;
+  padding: 4px 8px;
+  border: 1px solid #ffffff;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-primary);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.monthly-ranking-title {
+  display: -webkit-box;
+  overflow: hidden;
+  padding: 18px;
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  text-wrap: balance;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.monthly-ranking-skeleton {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  min-height: 144px;
+}
+
+.monthly-ranking-skeleton-poster,
+.monthly-ranking-skeleton-title {
+  background-color: #1c1c1c;
+}
+
+.monthly-ranking-skeleton-title {
+  align-self: center;
+  height: 22px;
+  margin: 18px;
+  border-radius: var(--radius-sm);
+}
+
+.monthly-ranking-error {
+  padding: 16px;
+  border: 1px solid rgba(173, 24, 24, 0.5);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .monthly-ranking-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .monthly-ranking-link {
+    display: block;
+    min-height: 0;
+  }
+
+  .monthly-ranking-poster-wrapper {
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
+
+  .monthly-ranking-title {
+    min-height: 82px;
+  }
+
+  .monthly-ranking-skeleton {
+    display: block;
+    min-height: 0;
+  }
+
+  .monthly-ranking-skeleton-poster {
+    aspect-ratio: 2 / 3;
+  }
+
+  .monthly-ranking-skeleton-title {
+    height: 22px;
+    margin: 18px;
+  }
+}

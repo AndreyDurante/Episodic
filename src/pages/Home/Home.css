@@ -5,6 +5,10 @@
   padding: 24px 0;
 }
 
+.home-page > .monthly-most-watched {
+  margin-top: -24px;
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;

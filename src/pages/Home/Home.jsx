@@ -1,14 +1,44 @@
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Compass, Sparkles, Film, Zap, CheckCircle2 } from 'lucide-react';
+import { Compass, Sparkles } from 'lucide-react';
 import Button from '../../components/Button/Button';
+import MonthlyMostWatched from '../../components/MonthlyMostWatched/MonthlyMostWatched';
+import { getMonthlyMostWatched } from '../../services/tmdb';
 import './Home.css';
 
 export default function Home() {
   const navigate = useNavigate();
+  const [rankedItems, setRankedItems] = useState([]);
+  const [loadingRankedItems, setLoadingRankedItems] = useState(true);
+  const [rankingError, setRankingError] = useState(null);
 
   const handleStartDiscovery = () => {
     navigate('/descobrir');
   };
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadMonthlyMostWatched = async () => {
+      setLoadingRankedItems(true);
+      setRankingError(null);
+
+      try {
+        const items = await getMonthlyMostWatched();
+        if (isMounted) setRankedItems(items);
+      } catch (error) {
+        if (isMounted) setRankingError(error.message);
+      } finally {
+        if (isMounted) setLoadingRankedItems(false);
+      }
+    };
+
+    void loadMonthlyMostWatched();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <div className="home-page">
@@ -35,6 +65,11 @@ export default function Home() {
         </div>
       </section>
 
+      <MonthlyMostWatched
+        items={rankedItems}
+        loading={loadingRankedItems}
+        error={rankingError}
+      />
     </div>
   );
 }
