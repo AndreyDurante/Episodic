@@ -74,6 +74,11 @@
   border-radius: var(--radius-sm);
 }
 
+#inicio{
+  border: rgba(255, 0, 0, 0.15) 1px solid;
+  
+}
+
 .nav-link:hover {
   color: var(--text-primary);
   background-color: var(--bg-surface-hover);
@@ -82,7 +87,7 @@
 .nav-link.active {
   color: var(--accent-primary);
   font-weight: 600;
-  background-color: rgba(173, 24, 24, 0.15);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 640px) {

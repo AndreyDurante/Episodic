@@ -13,13 +13,13 @@ export default function Header() {
             <Tv size={22} className="logo-icon" />
           </div>
           <span className="brand-name">Episodic</span>
-          <span className="brand-badge">Discovery</span>
         </Link>
 
         <nav className="header-nav">
           <Link
             to="/"
             className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+            id='inicio'
           >
             Início
           </Link>

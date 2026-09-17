@@ -61,11 +61,7 @@ export default function Results() {
     <div className="results-page">
       <header className="results-header">
         <div className="results-header-info">
-          <div className="results-badge">
-            <Sparkles size={16} />
-            <span>Seleção Personalizada</span>
-          </div>
-          <h1 className="results-title">O que assistir hoje</h1>
+          <h1 className="results-title">O que assistir <span className='title-highlight'>hoje!</span> </h1>
           <p className="results-subtitle">
             Selecionamos as melhores opções com base no que você escolheu no quiz:
           </p>

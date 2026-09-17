@@ -43,10 +43,6 @@ export default function Home() {
   return (
     <div className="home-page">
       <section className="hero-section">
-        <div className="hero-badge">
-          <Sparkles size={16} className="hero-badge-icon" />
-          <span>Fim da dúvida do que assistir</span>
-        </div>
 
         <h1 className="hero-title">
           Descubra o filme ou série ideal em <span className="title-highlight">menos de 1 minuto</span>
