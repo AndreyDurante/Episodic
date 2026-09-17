@@ -16,7 +16,12 @@ export default function MovieCard({
 
   return (
     <article className="movie-card">
-      <Link to={`/filme/${id}`} className="movie-card-link" aria-label={`Ver detalhes de ${title}`}>
+      <Link
+        to={isMovie ? `/filme/${id}` : `/serie/${id}`}
+        state={{ type }}
+        className="movie-card-link"
+        aria-label={`Ver detalhes de ${title}`}
+      >
         <div className="movie-poster-wrapper">
           {poster ? (
             <img
