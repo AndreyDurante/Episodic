@@ -40,8 +40,8 @@ export default function MonthlyMostWatched({ items, loading, error }) {
             return (
               <article className="monthly-ranking-card" key={`${item.type}-${item.id}`}>
                 <Link
-                  to={`/filme/${item.id}`}
-                  state={{ from: '/', backLabel: 'Voltar para a Home' }}
+                  to={isMovie ? `/filme/${item.id}` : `/serie/${item.id}`}
+                  state={{ type: item.type, from: '/', backLabel: 'Voltar para a Home' }}
                   className="monthly-ranking-link"
                   aria-label={`Ver detalhes de ${item.title}`}
                 >

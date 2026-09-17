@@ -30,14 +30,18 @@ export default function Details() {
     setError(null);
 
     try {
-      const details = await getContentDetails(id);
+      const forcedType = location.state?.type; // 'movie' | 'tv' if provided by the link
+      const guessedType = location.pathname.startsWith('/serie') ? 'tv' : 'movie';
+      const resolvedType = forcedType ?? guessedType;
+
+      const details = await getContentDetails(id, resolvedType);
       setMovie(details);
     } catch (err) {
       setError(err.message || 'Não foi possível carregar os detalhes do conteúdo selecionado.');
     } finally {
       setLoading(false);
     }
-  }, [id]);
+  }, [id, location]);
 
   useEffect(() => {
     const requestTimer = window.setTimeout(() => {

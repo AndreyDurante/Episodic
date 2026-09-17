@@ -13,6 +13,8 @@ export default function AppRoutes() {
         <Route path="/descobrir" element={<Discover />} />
         <Route path="/resultados" element={<Results />} />
         <Route path="/filme/:id" element={<Details />} />
+        <Route path="/serie/:id" element={<Details />} />
+        <Route path="/serie/:id" element={<Details />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>
