@@ -1,16 +1,21 @@
-# React + Vite
+Episodic - Encontre sua nova paixão
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Andrey Durante da Costa - RM: 569922
+Felipe Eloy Macedo - RM:573404
+Gustavo Maciel - RM: 570720
 
-Currently, two official plugins are available:
+Problema/dor: Não saber o que assistir, sendo séries ou filmes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Solução: O Episodic além de mostrar os filmes e séries mais assistidos recentemente ele faz um quiz e com base nas respostas mostra recomendações que atendem ao seu gosto.
 
-## React Compiler
+Foi usado Vite, React, HTML puro e CSS puro para a construção do projeto.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Foi utilizada a API da The Movies DataBase para obter informações dos filmes e séries.
 
-## Expanding the ESLint configuration
+Na Home page o projeto mostra os filmes e séries mais assistidos recentemente e um botão para iniciar o quiz de gosto e preferência, retornando as melhores recomendações de acordo com as respostas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+O projeto foi desenvolvido com o uso de IA, usando o método Spec-Kit, uma derivação do SDD (Spec-Driven Development).
+
+Para inicializar o projeto são obrigatórios os seguintes comandos:
+npm i
+npm run dev
